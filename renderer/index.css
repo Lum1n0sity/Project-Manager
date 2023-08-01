@@ -350,25 +350,20 @@ header {
     cursor: pointer;
 }
 
-#close_btn {
-    background-color: rgba(255, 255, 255, 0.863);
+#close_btn_lo {
+    background-color: transparent;
     border: none;
     outline: none;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: fixed;
     top: 7rem;
     right: 31.1rem;
     color: white;
     cursor: pointer;
-    display: none;
-    z-index: 4;
-    color: black;
+    display: block;
+    z-index: 10;
     width: 70px;
     height: 70px;
-    padding-bottom: 70px;
-    border: solid 2px black;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 20px;
 }
 
 #create_acc_container {
@@ -383,11 +378,14 @@ header {
     top: 7rem;
     left: 34rem;
     z-index: 2;
-    display: block;
+    display: none;
 }
 
 #create_title {
-    font-size: xxx-large;
+    font-size: xx-large;
+    position: fixed;
+    top: 1rem;
+    left: 2.5rem;
 }
 
 #username_cr_p {
@@ -470,10 +468,81 @@ header {
     left: 1rem;
 }
 
+#password_cr_icon {
+    font-size: 2rem;    
+    position: fixed;
+    top: 16.8rem;
+    left: 15.5rem;
+}
+
 #username_cr_er {
+    font-size: 1rem;
+    color: red;
+    position: fixed;
+    top: 9.7rem;
+    left: 1rem;
     display: none;
 }
 
 #password_cr_er {
+    font-size: 1rem;
+    color: red;
+    position: relative;
+    top: 20.3rem;
+    left: 1rem;
+    display: none;
+}
+
+#login_cr_account_p {
+    font-size: 1rem;
+    color: white;
+    position: fixed;
+    left: 1rem;
+    top: 22rem;
+}
+
+#switch_login_cr_btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    position: fixed;
+    left: 12.5rem;
+    top: 22.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#create_btn {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 26rem;
+    left: 4rem;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+#close_btn_cr {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 3.5rem;
+    position: fixed;
+    top: 7rem;
+    right: 31.1rem;
+    cursor: pointer;
+    display: block;
+    z-index: 4;
+    color: white;
+    width: 70px;
+    height: 70px;
     display: none;
 }
