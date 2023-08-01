@@ -350,14 +350,23 @@ header {
     cursor: pointer;
 }
 
-#close_btn_lo {
-    background-color: transparent;
+#close_btn {
+    background-color: rgba(255, 255, 255, 0.863);
     border: none;
     outline: none;
     font-size: 4rem;
     position: fixed;
-    top: 0rem;
-    right: 0rem;
+    top: 7rem;
+    right: 31.1rem;
     color: white;
     cursor: pointer;
+    display: none;
+    z-index: 4;
+    color: black;
+    width: 70px;
+    height: 70px;
+    padding-bottom: 70px;
+    border: solid 2px black;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 20px;
 }
