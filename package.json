@@ -6,16 +6,9 @@
   "scripts": {
     "start": "electron ."
   },
-  "author": "",
+  "author": "Raphael Schuhmann <raphael221@outlook.de>",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^25.3.2",
-    "electron-reload": "^2.0.0-alpha.1",
-    "nodemon": "^3.0.1",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
-  },
-  "dependencies": {
-    "electronmon": "^2.0.2"
+    "electron": "^15.5.7"
   }
 }
