@@ -210,7 +210,7 @@ header {
 }
 
 #login_container {
-    background-color: #1c1c79;
+    background-color: #272764;
     backdrop-filter: blur(90px);
     width: 20rem;
     height: 30rem;
@@ -369,4 +369,111 @@ header {
     border: solid 2px black;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 20px;
+}
+
+#create_acc_container {
+    background-color: #272764;
+    backdrop-filter: blur(90px);
+    width: 20rem;
+    height: 30rem;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: white;
+    position: fixed;
+    top: 7rem;
+    left: 34rem;
+    z-index: 2;
+    display: block;
+}
+
+#create_title {
+    font-size: xxx-large;
+}
+
+#username_cr_p {
+    font-size: large;
+    position: fixed;
+    top: 6rem;
+    left: 1rem;
+}
+
+#username_cr_in {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: large;
+    width: 13rem;
+    position: fixed;
+    top: 8.5rem;
+    left: 1rem;
+}
+
+#username_cr_icon {
+    font-size: 2rem;
+    position: fixed;
+    top: 6.5rem;
+    left: 15.5rem;
+}
+
+#email_cr_p {
+    font-size: large;
+    position: fixed;
+    top: 11rem;
+    left: 1rem;
+}
+
+#email_cr_in {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: large;
+    width: 13rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    top: 13.5rem;
+    left: 1rem;
+}
+
+#email_cr_icon {
+    font-size: 2rem;    
+    position: fixed;
+    top: 11.5rem;
+    left: 15.5rem;
+}
+
+#password_cr_p {
+    font-size: large;
+    position: fixed;
+    top: 16.3rem;
+    left: 1rem;
+}
+
+#password_cr_in {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: large;
+    width: 13rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    top: 19rem;
+    left: 1rem;
+}
+
+#username_cr_er {
+    display: none;
+}
+
+#password_cr_er {
+    display: none;
 }
