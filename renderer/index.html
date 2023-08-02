@@ -7,6 +7,7 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="account-ui.js"></script>
+        <script src="create_new.js"></script>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
@@ -64,6 +65,16 @@
             <p id="login_cr_account_p">Already have an Account?</p>
             <button id="switch_login_cr_btn">Login</button>
             <button id="create_btn">Create Account</button>
+        </div>
+        <div id="new_container">
+            <h3 id="new_prj_title">New Project</h3>
+            <p id="new_prj_prjname_p">Project Name</p>
+            <input id="new_prj_prjname_in" type="text" placeholder="Project Name...">
+            <p id="new_prj_prjdir_p">Directory</p>
+            <input id="display_dir_input" type="text">
+            <button id="select_dir_btn">...</button>
+            <button id="new_prj_create">Create Project</button>  
+            <button id="new_prj_close"><ion-icon name="close-outline"></ion-icon></button>
         </div>
     </body>
 </html>

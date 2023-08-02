@@ -546,3 +546,105 @@ header {
     height: 70px;
     display: none;
 }
+
+#new_container {
+    background-color: red;
+    z-index: 4;
+    width: 25rem;
+    height: 16rem;
+    position: fixed;
+    top: 10rem;
+    left: 20rem;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+#new_prj_title {
+    font-size: x-large;
+    position: fixed;
+    top: 9.5rem;
+    left: 28rem;
+}
+
+#new_prj_prjname_p {
+    font-size: 1rem;
+    position: fixed;
+    top: 12.5rem;
+    left: 23rem;
+}
+
+#new_prj_prjname_in {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    position: fixed;
+    top: 14.7rem;
+    left: 22.5rem;
+}
+
+#new_prj_prjdir_p {
+    font-size: 1rem;
+    position: fixed;
+    top: 16.5rem;
+    left: 23rem;
+}
+
+#display_dir_input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px;
+    position: fixed;
+    top: 18.8rem;
+    left: 22.5rem;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#select_dir_btn {
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 2px lightgray solid;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px;
+    padding-right: 15px;
+    position: fixed;
+    top: 18.8rem;
+    left: 36.7rem;
+    cursor: pointer;
+}
+
+#new_prj_create {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: large;
+    position: fixed;
+    top: 22.5rem;
+    left: 28rem;
+    cursor: pointer;
+}
+
+#new_prj_close {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 3.5rem;
+    position: fixed;
+    top: 10rem;
+    left: 41rem;
+    cursor: pointer;
+    z-index: 4;
+    color: white;
+    width: 70px;
+    height: 70px;
+    display: block;
+}
