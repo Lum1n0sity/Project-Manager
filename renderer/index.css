@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #6a6a86;
+    background-color: #0d1117;
     color: white;
     height: 100%;
     width: 100%;
@@ -11,12 +11,32 @@ body {
 }
 
 header {
-    background-color: #969696;
+    background-color: #010409;
     width: 100%;
     height: 5rem;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+}
+
+#header_sidebar_rounded_corner01 {
+    width: 20px;
+    height: 20px;
+    background-color: #010409;
+    position: absolute;
+    top: 5em;
+    left: 5rem;
+}
+
+#header_sidebar_rounded_corner02{
+    width: 20px;
+    height: 20px;
+    background-color: #0d1117;
+    border-top-left-radius: 50px;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
     z-index: 1;
 }
 
@@ -76,9 +96,10 @@ header {
     height: 3rem;
     position: fixed;
     top: 1rem;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
     left: 34rem;
-    background-color: white;
+    background-color: #161b22;
 }
 
 #search_bar {
@@ -97,6 +118,7 @@ header {
     padding-bottom: 0px;
     z-index: 1;   
     background-color: transparent;
+    color: white;
 }
 
 #search_button {
@@ -104,12 +126,17 @@ header {
     position: fixed;
     height: 3rem;
     top: 1rem;
-    left: 54.2rem;
-    background-color: white;
-    border-radius: 20px;
-    border: none;
+    left: 53.5rem;
+    align-content: center;
+    background-color: #161b22;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-left: #0d1117 solid 2px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
     outline: none;
-    color: black;
+    color: white;
     cursor: pointer;
     transition: .5s;
 }
@@ -129,7 +156,6 @@ header {
     height: 3rem;
     cursor: pointer;
     z-index: 2;
-    
 }
 
 #ProjectManager:hover {
@@ -153,7 +179,7 @@ header {
 #side_bar {
     width: 5rem;
     height: 100rem;
-    background-color: #969696;
+    background-color: #010409;
     position: fixed;
     left: 0rem;
     top: 0rem;
@@ -191,26 +217,8 @@ header {
     z-index: 2;
 }
 
-#projects_list_title {
-    font-size: xx-large;
-    position: fixed;
-    top: 3.5rem;
-    left: 40rem;
-    z-index: 2;
-}
-
-#projcect_list {
-    background-color: #424242 ;
-    z-index: 2;
-    height: 37.1rem;
-    width: 80.4rem;
-    position: fixed;
-    top: 5rem;
-    left: 5rem;
-}
-
 #login_container {
-    background-color: #6C757D;
+    background-color: #161b22;
     backdrop-filter: blur(90px);
     width: 20rem;
     height: 30rem;
@@ -367,7 +375,7 @@ header {
 }
 
 #create_acc_container {
-    background-color: #6C757D ;
+    background-color: #161b22 ;
     backdrop-filter: blur(90px);
     width: 20rem;
     height: 30rem;
@@ -547,13 +555,14 @@ header {
 }
 
 #new_container {
-    background-color: #6C757D ;
+    background-color: #161b22 ;
     z-index: 4;
     width: 25rem;
-    height: 16rem;
+    height: 17rem;
+    transform: translate(-50%, -50%);
     position: fixed;
-    top: 10rem;
-    left: 31rem;
+    top: 50%;
+    left: 50%;
     border: solid 2px black;
     border-radius: 20px;
     display: none;
@@ -562,15 +571,15 @@ header {
 #new_prj_title {
     font-size: x-large;
     position: fixed;
-    top: 9.5rem;
-    left: 39.5rem;
+    top: 0%;
+    left: 33.5%;
 }
 
 #new_prj_prjname_p {
     font-size: 1rem;
     position: fixed;
-    top: 12.5rem;
-    left: 35rem;
+    top: 16%;
+    left: 15%;
 }
 
 #new_prj_prjname_in {
@@ -580,15 +589,15 @@ header {
     border-radius: 20px;
     padding: 10px;
     position: fixed;
-    top: 14.7rem;
-    left: 34.5rem;
+    top: 30%;
+    left: 11%;
 }
 
 #new_prj_prjdir_p {
     font-size: 1rem;
     position: fixed;
-    top: 16.5rem;
-    left: 35rem;
+    top: 41%;
+    left: 15%;
 }
 
 #display_dir_input {
@@ -597,8 +606,8 @@ header {
     font-size: 1rem;
     padding: 10px;
     position: fixed;
-    top: 18.8rem;
-    left: 34.5rem;
+    top: 54%;
+    left: 11%;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -616,8 +625,8 @@ header {
     padding: 10px;
     padding-right: 15px;
     position: fixed;
-    top: 18.8rem;
-    left: 48.7rem;
+    top: 54%;
+    left: 67%;
     cursor: pointer;
 }
 
@@ -628,8 +637,8 @@ header {
     padding: 10px;
     font-size: large;
     position: fixed;
-    top: 22.5rem;
-    left: 39rem;
+    top: 76%;
+    left: 33%;
     cursor: pointer;
 }
 
@@ -639,8 +648,8 @@ header {
     outline: none;
     font-size: 3.5rem;
     position: fixed;
-    top: 10rem;
-    left: 52rem;
+    top: 0%;
+    left: 83%;
     cursor: pointer;
     z-index: 4;
     color: white;

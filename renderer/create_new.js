@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const close_btn = document.getElementById('new_prj_close');
     const open_btn = document.getElementById('new_Project');
     const container = document.getElementById('new_container');
+    const dirHandle = '';
     let isNewPrjWinOpen = false;
+
+    console.log("isProjcetWinOpen = ", isNewPrjWinOpen);
 
     getDirectoryButton.addEventListener('click', function () {
         getDirectory();
@@ -13,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function getDirectory()
     {
-        const dirHandle = await window.showDirectoryPicker();
+        dirHandle = await window.showDirectoryPicker();
         updateInputValues(dirHandle);    
     }
 
