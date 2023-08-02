@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #101043;
+    background-color: #969696;
     width: 100%;
     height: 5rem;
     position: fixed;
@@ -153,7 +153,7 @@ header {
 #side_bar {
     width: 5rem;
     height: 100rem;
-    background-color: #101043;
+    background-color: #969696;
     position: fixed;
     left: 0rem;
     top: 0rem;
@@ -200,7 +200,7 @@ header {
 }
 
 #projcect_list {
-    background-color: white;
+    background-color: #424242 ;
     z-index: 2;
     height: 37.1rem;
     width: 80.4rem;
@@ -210,7 +210,7 @@ header {
 }
 
 #login_container {
-    background-color: #272764;
+    background-color: #6C757D;
     backdrop-filter: blur(90px);
     width: 20rem;
     height: 30rem;
@@ -360,14 +360,14 @@ header {
     right: 31.1rem;
     color: white;
     cursor: pointer;
-    display: block;
+    display: none;
     z-index: 10;
     width: 70px;
     height: 70px;
 }
 
 #create_acc_container {
-    background-color: #272764;
+    background-color: #6C757D ;
     backdrop-filter: blur(90px);
     width: 20rem;
     height: 30rem;
@@ -539,7 +539,6 @@ header {
     top: 7rem;
     right: 31.1rem;
     cursor: pointer;
-    display: block;
     z-index: 4;
     color: white;
     width: 70px;
@@ -548,29 +547,30 @@ header {
 }
 
 #new_container {
-    background-color: red;
+    background-color: #6C757D ;
     z-index: 4;
     width: 25rem;
     height: 16rem;
     position: fixed;
     top: 10rem;
-    left: 20rem;
+    left: 31rem;
     border: solid 2px black;
     border-radius: 20px;
+    display: none;
 }
 
 #new_prj_title {
     font-size: x-large;
     position: fixed;
     top: 9.5rem;
-    left: 28rem;
+    left: 39.5rem;
 }
 
 #new_prj_prjname_p {
     font-size: 1rem;
     position: fixed;
     top: 12.5rem;
-    left: 23rem;
+    left: 35rem;
 }
 
 #new_prj_prjname_in {
@@ -581,14 +581,14 @@ header {
     padding: 10px;
     position: fixed;
     top: 14.7rem;
-    left: 22.5rem;
+    left: 34.5rem;
 }
 
 #new_prj_prjdir_p {
     font-size: 1rem;
     position: fixed;
     top: 16.5rem;
-    left: 23rem;
+    left: 35rem;
 }
 
 #display_dir_input {
@@ -598,7 +598,7 @@ header {
     padding: 10px;
     position: fixed;
     top: 18.8rem;
-    left: 22.5rem;
+    left: 34.5rem;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -617,7 +617,7 @@ header {
     padding-right: 15px;
     position: fixed;
     top: 18.8rem;
-    left: 36.7rem;
+    left: 48.7rem;
     cursor: pointer;
 }
 
@@ -629,7 +629,7 @@ header {
     font-size: large;
     position: fixed;
     top: 22.5rem;
-    left: 28rem;
+    left: 39rem;
     cursor: pointer;
 }
 
@@ -640,7 +640,7 @@ header {
     font-size: 3.5rem;
     position: fixed;
     top: 10rem;
-    left: 41rem;
+    left: 52rem;
     cursor: pointer;
     z-index: 4;
     color: white;
