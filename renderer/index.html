@@ -8,7 +8,6 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="account-ui.js"></script>
         <script src="create_new.js"></script>
-        <script src="api-connection.js"></script>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
@@ -17,6 +16,15 @@
             <button id="ProjectManager"><ion-icon name="list-outline"></ion-icon></button>
             <button id="Sharing"><ion-icon name="share-outline"></ion-icon></button>
             <button id="Account"><ion-icon name="person-circle-outline"></ion-icon></button>
+            <div id="account-details">
+                <h2 id="account_header">Account</h2>
+                <button id="close_menu"><ion-icon name="close-outline"></ion-icon></button>
+                <p id="account_name">testusername</p>
+                <input id="account_password" type="password">
+                <p id="account_email">examplemail@exmaple.de</p>
+                <button id="display_password"><ion-icon name="eye-outline"></ion-icon></button>
+            </div>
+            <button id="login_header">Login</button>
             <div id="search_container">
                 <input id="search_bar" type="search" placeholder="Search for Projects...">
                 <button id="search_button"><ion-icon name="search-outline"></ion-icon></button>

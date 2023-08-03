@@ -88,6 +88,52 @@ header {
     right: 2rem;
     cursor: pointer;
     transition: .5s;
+    display: none;
+}
+
+#login_header {
+    font-size: 2.5rem;
+    background-color: #161b22;
+    border: none;
+    outline: none;
+    color: white;
+    position: fixed;
+    top: .5rem;
+    right: 2rem;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 20px;
+    padding: 10px;  
+    display: block;
+}
+
+#account-details {
+    background-color: #161b22;
+    border: solid #212429 2px;
+    width: 20rem;
+    height: 15rem;
+    border-radius: 20px;
+    position: fixed;
+    top: 12%;
+    right: 1%;
+}
+
+#account_header {
+    position: relative;
+    top: -2%;
+    left: 35%;
+}
+
+#close_menu {
+    background-color: transparent;
+    font-size: 2.5rem;
+    outline: none;
+    border: none;
+    color: white;
+    position: relative;
+    top: -28%;
+    right: -84%;
+    cursor: pointer;
 }
 
 #search_container {

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container_cr = document.getElementById('create_acc_container');
 
     const acc_Button = document.getElementById('Account');
+    const login_header = document.getElementById('login_header');
     const switch_lo = document.getElementById('switch_login_cr_btn');
     const switch_cr = document.getElementById('switch_create_lo_btn');
 
@@ -11,12 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const login_btn = document.getElementById('login_btn');
 
-    var isAccMenuOpen = false;
+    let isAccMenuOpen = false;
+    let canLogIn = false;
 
-    acc_Button.addEventListener('click', function () {
-        container_lo.style.display = 'block';
-        close_Button_lo.style.display = 'block';
-        isAccMenuOpen = true;
+    login_header.addEventListener('click', function () {
+        if (!isAccMenuOpen && !canLogIn)
+        {
+            container_lo.style.display = 'block';
+            close_Button_lo.style.display = 'block';
+            isAccMenuOpen = true;
+        }
     });
 
     close_Button_lo.addEventListener('click', function () {
@@ -64,21 +69,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username_lo_in').value;
         const password = document.getElementById('password_lo_in').value;
 
+        console.log('Username: ', username);
+        console.log('Password: ', password);
+
         const dataToSend = { username: username, password: password };
+
+        console.log('DatatoSend: ', dataToSend);
 
         fetch('http://127.0.0.1:3000/api/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(dataToSend)
+            body: JSON.stringify(dataToSend),
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            console.log('Display Response data', data);
+            const allowLogin = data.allowLogin;
+
+            if (allowLogin === true)
+            {
+                canLogIn = true;
+            }
         })
         .catch(error => {
             console.error("Error sending data: ", error);
         });
+    }
+
+    if (canLogIn)
+    {
+        login_header.style.display = 'none';
+        acc_Button.style.display = 'block';
     }
 })
