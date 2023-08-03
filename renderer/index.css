@@ -92,18 +92,18 @@ header {
 }
 
 #login_header {
-    font-size: 2.5rem;
-    background-color: #161b22;
+    width: 60px;
+    height: 50px;
+    font-size: 3rem;
+    background-color: transparent;
     border: none;
     outline: none;
     color: white;
     position: fixed;
-    top: .5rem;
+    top: .9rem;
     right: 2rem;
     cursor: pointer;
     transition: .5s;
-    border-radius: 20px;
-    padding: 10px;  
     display: block;
 }
 
@@ -111,17 +111,19 @@ header {
     background-color: #161b22;
     border: solid #212429 2px;
     width: 20rem;
-    height: 15rem;
+    height: 25rem;
     border-radius: 20px;
     position: fixed;
-    top: 12%;
+    top: 10%;
     right: 1%;
+    display: none;
 }
 
 #account_header {
     position: relative;
     top: -2%;
     left: 35%;
+    z-index: 5;
 }
 
 #close_menu {
@@ -131,9 +133,75 @@ header {
     border: none;
     color: white;
     position: relative;
-    top: -28%;
+    top: -17%;
     right: -84%;
     cursor: pointer;
+}
+
+#account_name_header {
+    position: relative;
+    top: -20%;
+    left: 10%;
+}
+
+#account_name_display {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px;
+    background-color: #0d1117;
+    color: white;
+    position: relative;
+    top: -23%;
+    left: 5%;
+}
+
+#account_password_header {
+    position: relative;
+    top: -20%;
+    left: 10%;
+}
+
+#account_password_display {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px;
+    background-color: #0d1117;
+    color: white;
+    position: relative;
+    top: -23%;
+    left: 5%;
+}
+
+#account_email_header {
+    position: relative;
+    top: -20%;
+    left: 10%;
+}
+
+#account_email_display {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px;
+    background-color: #0d1117;
+    color: white;
+    position: relative;
+    top: -23%;
+    left: 5%;
+}
+
+#display_password {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    top: -45%;
+    right: -7%;
 }
 
 #search_container {
@@ -222,6 +290,12 @@ header {
     transition: .5s;
 }
 
+#login_header:hover {
+    width: 60px;
+    height: 80px;
+    transition: .5s;
+}
+
 #side_bar {
     width: 5rem;
     height: 100rem;
@@ -269,13 +343,14 @@ header {
     width: 20rem;
     height: 30rem;
     border-radius: 20px;
-    border: 2px solid black;
+    border: 2px solid #212429;
     color: white;
     position: fixed;
     top: 16%;
     left: 40%;
+    transform: translate(-50% -50%);
     z-index: 2;
-    display: none;
+    display: block;
 }
 
 #login_title {
@@ -293,7 +368,9 @@ header {
 }
 
 #username_lo_in {
-    border-radius: 20px;
+    background-color: #0d1117;
+    color: white;
+    border-radius: 10px;
     outline: none;
     border: none;
     padding-top: 5px;
@@ -320,59 +397,74 @@ header {
 #password_lo_p {
     font-size: large;
     position: relative;
-    top: -5rem;
+    top: -6rem;
     left: 2rem;
 }
 
 #password_lo_in {
-    border-radius: 20px;
+    background-color: #0d1117;
+    color: white;
+    border-radius: 10px;
     outline: none;
     border: none;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-right: 35px;
     font-size: large;
-    width: 13rem;
+    width: 11rem;
     position: relative;
-    top: -6rem;
+    top: -7rem;
     left: 2rem;
 }
 
 #password_lo_in[type="password"] {
     padding-left: 10px;
-    padding-right: 10px;
+}
+
+#password_lo_in[type="text"] {
+    padding-left: 10px;
 }
 
 #password_lo_icon {
     font-size: 2rem;
     position: relative;
-    top: -10rem;
+    top: -11rem;
     left: 16.5rem;
 }
 
-#username_lo_p_er {
-    font-size: 1rem;
+#view_password_lo {
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
     color: white;
-    position: relative;
-    top: -19rem;
-    left: 2rem;
-    display: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    top: 14.75rem;
+    left: 13.5rem;
 }
 
-#password_lo_p_er {
-    font-size: 1rem;
-    color: white;
-    position: relative;
-    top: -12rem;
+#input_error_lo {
+    background-color: rgba(255, 0, 0, 0.356);
+    border: 2px solid rgba(255, 0, 0, 0.788);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    top: 16.5rem;
     left: 2rem;
-    display: block;
 }
 
 #create_lo_account_p {
     font-size: 1rem;
     color: white;
-    position: relative;
+    position: fixed;
     left: 2rem;
-    top: -11.5rem;
+    top: 20rem;
 }
 
 #switch_create_lo_btn {
@@ -381,23 +473,23 @@ header {
     border: none;
     outline: none;
     font-size: 1rem;
-    position: relative;
+    position: fixed;
     left: 1.7rem;
-    top: -13rem;
+    top: 22.5rem;
     text-decoration: underline;
     cursor: pointer;
 }
 
 #login_btn {
-    background-color: white;
-    color: black;
+    background-color: #0d1117;
+    color: white;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 2rem;
-    position: relative;
-    top: -9rem;
-    left: -.9rem;
+    position: fixed;
+    top: 25rem;
+    left: 7rem;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -410,14 +502,13 @@ header {
     outline: none;
     font-size: 3.5rem;
     position: fixed;
-    top: 16%;
-    right: 36%;
+    top: 0%;
+    right: 0%;
     cursor: pointer;
     z-index: 4;
     color: white;
     width: 70px;
     height: 70px;
-    display: none;
 }
 
 #create_acc_container {
@@ -446,7 +537,7 @@ header {
     font-size: large;
     position: fixed;
     top: 6rem;
-    left: 1rem;
+    left: 2rem;
 }
 
 #username_cr_in {
@@ -461,21 +552,21 @@ header {
     width: 13rem;
     position: fixed;
     top: 8.5rem;
-    left: 1rem;
+    left: 2rem;
 }
 
 #username_cr_icon {
     font-size: 2rem;
     position: fixed;
     top: 6.5rem;
-    left: 15.5rem;
+    left: 16.5rem;
 }
 
 #email_cr_p {
     font-size: large;
     position: fixed;
     top: 11rem;
-    left: 1rem;
+    left: 2rem;
 }
 
 #email_cr_in {
@@ -490,21 +581,21 @@ header {
     padding-right: 10px;
     position: fixed;
     top: 13.5rem;
-    left: 1rem;
+    left: 2rem;
 }
 
 #email_cr_icon {
     font-size: 2rem;    
     position: fixed;
     top: 11.5rem;
-    left: 15.5rem;
+    left: 16.5rem;
 }
 
 #password_cr_p {
     font-size: large;
     position: fixed;
     top: 16.3rem;
-    left: 1rem;
+    left: 2rem;
 }
 
 #password_cr_in {
@@ -519,14 +610,14 @@ header {
     padding-right: 10px;
     position: fixed;
     top: 19rem;
-    left: 1rem;
+    left: 2rem;
 }
 
 #password_cr_icon {
     font-size: 2rem;    
     position: fixed;
     top: 16.8rem;
-    left: 15.5rem;
+    left: 16.5rem;
 }
 
 #username_cr_er {
@@ -534,7 +625,7 @@ header {
     color: red;
     position: fixed;
     top: 9.7rem;
-    left: 1rem;
+    left: 2rem;
     display: none;
 }
 
@@ -542,8 +633,8 @@ header {
     font-size: 1rem;
     color: red;
     position: relative;
-    top: 20.3rem;
-    left: 1rem;
+    top: 21.3rem;
+    left: 2rem;
     display: none;
 }
 
@@ -551,7 +642,7 @@ header {
     font-size: 1rem;
     color: white;
     position: fixed;
-    left: 1rem;
+    left: 2rem;
     top: 22rem;
 }
 
@@ -562,7 +653,7 @@ header {
     outline: none;
     font-size: 1rem;
     position: fixed;
-    left: 12.5rem;
+    left: 13.5rem;
     top: 22.9rem;
     text-decoration: underline;
     cursor: pointer;
@@ -590,14 +681,13 @@ header {
     outline: none;
     font-size: 3.5rem;
     position: fixed;
-    top: 16%;
-    right: 36%;
+    top: 0%;
+    right: 0%;
     cursor: pointer;
     z-index: 4;
     color: white;
     width: 70px;
     height: 70px;
-    display: none;
 }
 
 #new_container {

@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('new_container');
     const dirHandle = '';
     let isNewPrjWinOpen = false;
-
-    console.log("isProjcetWinOpen = ", isNewPrjWinOpen);  
     
     open_btn.addEventListener('click', function () {
         if (!isNewPrjWinOpen)
@@ -26,6 +24,4 @@ document.addEventListener('DOMContentLoaded', function () {
             isNewPrjWinOpen = false;
         }
     });
-
-
 });

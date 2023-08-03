@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Production Manager</title>
+        <title>Project Manager</title>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="account-ui.js"></script>
@@ -16,15 +16,7 @@
             <button id="ProjectManager"><ion-icon name="list-outline"></ion-icon></button>
             <button id="Sharing"><ion-icon name="share-outline"></ion-icon></button>
             <button id="Account"><ion-icon name="person-circle-outline"></ion-icon></button>
-            <div id="account-details">
-                <h2 id="account_header">Account</h2>
-                <button id="close_menu"><ion-icon name="close-outline"></ion-icon></button>
-                <p id="account_name">testusername</p>
-                <input id="account_password" type="password">
-                <p id="account_email">examplemail@exmaple.de</p>
-                <button id="display_password"><ion-icon name="eye-outline"></ion-icon></button>
-            </div>
-            <button id="login_header">Login</button>
+            <button id="login_header"><ion-icon name="log-in-outline"></ion-icon></button>
             <div id="search_container">
                 <input id="search_bar" type="search" placeholder="Search for Projects...">
                 <button id="search_button"><ion-icon name="search-outline"></ion-icon></button>
@@ -36,26 +28,35 @@
             <button id="new_Project"><ion-icon name="add-outline"></ion-icon></button>
             <button id="settings"><ion-icon name="settings-outline"></ion-icon></button>
         </div> 
-        <div>
-            <button id="close_btn_lo"><ion-icon name="close-outline"></ion-icon></button>
-            <button id="close_btn_cr"><ion-icon name="close-outline"></ion-icon></button>
+        <div id="account-details">
+            <h2 id="account_header">Account</h2>
+            <button id="close_menu"><ion-icon name="close-outline"></ion-icon></button>
+            <p id="account_name_header">Username:</p>
+            <input id="account_name_display" type="text" readOnly data-custom-value="">
+            <p id="account_password_header">Password:</p>
+            <input id="account_password_display" type="password" readOnly data-custom-value="">
+            <p id="account_email_header">E-Mail:</p>
+            <input id="account_email_display" type="email" readOnly data-custom-value="">
+            <button id="display_password"><ion-icon name="eye-outline"></ion-icon></button>
         </div>
         <div id="login_container">
             <h2 id="login_title">Login</h2>
+            <button id="close_btn_lo"><ion-icon name="close-outline"></ion-icon></button>
             <p id="username_lo_p">Username:</p>
             <input id="username_lo_in" type="text" placeholder="Username">
             <p id="username_lo_icon"><ion-icon name="person-outline"></ion-icon></p>
             <p id="password_lo_p">Password:</p>
             <input id="password_lo_in" type="password" placeholder="Password">
+            <button id="view_password_lo"><ion-icon name="eye-outline"></ion-icon></button>
             <p id="password_lo_icon"><ion-icon name="lock-open-outline"></ion-icon></p>
-            <p id="username_lo_p_er">Username is wrong!</p>
-            <p id="password_lo_p_er">Password is wrong!</p>
+            <p id="input_error_lo">Username or Password is wrong!</p>
             <p id="create_lo_account_p">Don't have an Account?</p>
             <button id="switch_create_lo_btn">Create Account</button>
             <button id="login_btn">Login</button>
         </div>
         <div id="create_acc_container">
             <h2 id="create_title">Create Account</h2>
+            <button id="close_btn_cr"><ion-icon name="close-outline"></ion-icon></button>
             <p id="username_cr_p">Create your username</p>
             <input id="username_cr_in" type="text" placeholder="Username">
             <p id="username_cr_icon"><ion-icon name="person-outline"></ion-icon></p>
