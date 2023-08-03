@@ -14,12 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const view_pw_lo = document.getElementById('view_password_lo');
     const password_in_lo = document.getElementById('password_lo_in');
+    const view_pw_cr = document.getElementById('view_password_cr');
+    const password_in_cr = document.getElementById('password_cr_in');
 
     const login_btn = document.getElementById('login_btn');
+    const create_account = document.getElementById('create_btn');
 
     let isAccMenuOpen = false;
     let isPasswordVisibleLo = false;
+    let isPasswordVisibleCr = false;
 
+    // UI:
+    // Password Preview:
     view_pw_lo.addEventListener('click', function () {
         if (isPasswordVisibleLo)
         {
@@ -33,6 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    view_pw_cr.addEventListener('click', function () {
+        if (isPasswordVisibleCr)
+        {
+            password_in_cr.type = 'password';
+            isPasswordVisibleCr = false;
+        }
+        else
+        {
+            password_in_cr.type = 'text';
+            isPasswordVisibleCr = true;
+        }
+    });
+
+    // Open Account Menus:
     login_header.addEventListener('click', function () {
         if (!isAccMenuOpen)
         {
@@ -74,25 +94,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Login, Create Account and Account Credentials:
     login_btn.addEventListener('click', Login);
 
     function Login() {
         const username = document.getElementById('username_lo_in').value;
         const password = document.getElementById('password_lo_in').value;
 
-        console.log('Username: ', username);
-        console.log('Password: ', password);
-
-        const dataToSend = { username: username, password: password };
-
-        console.log('DatatoSend: ', dataToSend);
+        const dataToSendLogin = { username: username, password: password };
 
         fetch('http://127.0.0.1:3000/api/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(dataToSend),
+            body: JSON.stringify(dataToSendLogin),
         })
         .then(response => {
             const login_error_message = document.getElementById('input_error_lo');
@@ -159,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         displayElement.addEventListener("blur", function () {
-            if (displayElement.value === displayElement.getAttribute("data-custom-value")) {
-                // If yes, set the input value to the custom value
+            if (displayElement.value === displayElement.getAttribute("data-custom-value")) 
+            {
                 displayElement.value = valueToInsert;
-              }
-              displayElement.classList.remove("selectable");
+            }
+            displayElement.classList.remove("selectable");
         });
     }
 
@@ -184,4 +200,43 @@ document.addEventListener('DOMContentLoaded', () => {
             isAccountCredentialsOpen = false;
         }
     });
+
+    create_account.addEventListener('click', CreateAccount);
+
+    function CreateAccount() {
+        const username = document.getElementById('username_cr_in').value;
+        const password = document.getElementById('password_cr_in').value;
+        const email = document.getElementById('email_cr_in').value;
+
+        const dataToSendCreate = ({ username: username, password: password, email: email });
+
+        console.log("DataToSendCreateAccount: ", dataToSendCreate);
+
+        fetch('http://127.0.0.1:3000/api/create_account', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dataToSendCreate),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error("Error sending data: ", error);
+        });
+    }
+
+    // Logout:
+    const logout_btn = document.getElementById('logout-account');
+
+    logout_btn.addEventListener('click', function () {
+        container_acv.style.display = 'none';
+        acc_Button.style.display = 'none';
+        login_header.style.display = 'block';
+    });
+        
+    // Delte Account:
+
 })
