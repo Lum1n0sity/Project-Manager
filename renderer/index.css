@@ -471,6 +471,17 @@ header {
     top: 14.75rem;
     left: 13.5rem;
 }
+#forgot-password_lo{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    text-decoration: underline solid white;
+    position: fixed;
+    top: 17rem;
+    left: 1.6rem;
+    cursor: pointer;
+}
 
 #input_error_lo {
     background-color: rgba(255, 0, 0, 0.356);
@@ -479,7 +490,7 @@ header {
     padding: 10px;
     display: none;
     position: fixed;
-    top: 16.5rem;
+    top: 17.5rem;
     left: 2rem;
 }
 
@@ -488,7 +499,7 @@ header {
     color: white;
     position: fixed;
     left: 2rem;
-    top: 20rem;
+    top: 21rem;
 }
 
 #switch_create_lo_btn {
@@ -499,7 +510,7 @@ header {
     font-size: 1rem;
     position: fixed;
     left: 1.7rem;
-    top: 22.5rem;
+    top: 23.5rem;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -512,7 +523,7 @@ header {
     border-radius: 10px;
     font-size: 2rem;
     position: fixed;
-    top: 25rem;
+    top: 26rem;
     left: 7rem;
     padding: 5px;
     padding-left: 10px;

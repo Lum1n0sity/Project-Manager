@@ -289,4 +289,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Reset Password:
+    const reset_button = document.getElementById('forgot-password_lo');
+    const username = document.getElementById('username_lo_in');
+
+    reset_button.addEventListener('click', function () {
+        const dataToSendReset = ({ username: username.value })
+
+        fetch('http://127.0.0.1:3000/api/forgot-password', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dataToSendReset),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error("Error sending data: ", error);
+        });
+    });
 })
