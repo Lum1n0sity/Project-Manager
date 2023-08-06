@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 login_header.style.display = 'none';
                 container_lo.style.display = 'none';
 
+                isAccMenuOpen = false;
+
                 const username_display = document.getElementById('account_name_display');
                 const password_display = document.getElementById('account_password_display');
                 const email_display = document.getElementById('account_email_display');
@@ -222,6 +224,24 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            const accountCreated = data.accountCreated;
+
+            if (accountCreated == true)
+            {
+                acc_Button.style.display = 'block';
+                login_header.style.display = 'none';
+                container_cr.style.display = 'none';
+
+                isAccMenuOpen = false;
+
+                const username_display = document.getElementById('account_name_display');
+                const password_display = document.getElementById('account_password_display');
+                const email_display = document.getElementById('account_email_display');
+
+                DisplayUserCredentials(username_display, username);
+                DisplayUserCredentials(password_display, password);
+                DisplayUserCredentials(email_display, email);
+            }
         })
         .catch(error => {
             console.error("Error sending data: ", error);
@@ -238,5 +258,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
         
     // Delte Account:
+    const delete_btn = document.getElementById('delete_account')
+    const username_del = document.getElementById('account_name_display');
 
+    delete_btn.addEventListener('click', function () {
+        var result = confirm('Are you sure you want to DELTE your Account?')
+        if (result == false)
+        {
+            event.preventDefault();
+        }
+        else
+        {
+            const dataToSendDelte = ({ username: username_del.value });
+
+            console.log('DataToDelte: ', username_del);
+
+            fetch('http://127.0.0.1:3000/api/delete_user', {
+                method: 'DELETE',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(dataToSendDelte),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error("Error sending data: ", error);
+            });
+        }
+    });
 })
