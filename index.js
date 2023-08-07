@@ -1,5 +1,8 @@
 const path = require('path');
 const { app, BrowserWindow, dialog, ipcMain } = require('electron');
+const mainJSPath = path.join(__dirname, 'reset-password', 'main.js');
+
+const { createWindow } = require(mainJSPath);
 
 const isDev = process.env.NODE_ENV !== 'development';
 const isRunning = true;
@@ -20,7 +23,7 @@ function createMainWindow() {
     mainWindow.setMinimumSize(1000, 600);
   }
 
-  mainWindow.loadFile(path.join(__dirname, 'renderer', 'index.html')); // Load index.html from the renderer folder
+  mainWindow.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 
   mainWindow.maximize();
   mainWindow.show();
@@ -41,4 +44,16 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+ipcMain.on('open-password-reset-window', (event, resetToken) => {
+  const passwordResetWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+  });
+
+  passwordResetWindow.loadURL(`file://${path.join(__dirname, 'rest-pw.html')}?token=${resetToken}`);
 });

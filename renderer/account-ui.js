@@ -297,6 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
     reset_button.addEventListener('click', function () {
         const dataToSendReset = ({ username: username.value })
 
+        console.log(dataToSendReset);
+
         fetch('http://127.0.0.1:3000/api/forgot-password', {
             method: 'POST',
             headers: {
