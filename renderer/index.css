@@ -862,4 +862,85 @@ header {
     width: 70px;
     height: 70px;
     display: block;
+}   
+
+#Project-List {
+    border: #161b22 solid 2px;
+    border-radius: 20px;
+    width: 40%;
+    height: 86.2%;
+    z-index: 5;
+    position: fixed;
+    left: 6.4%;
+    top: 13%;
+}
+
+#ToDo-List {
+    border: #161b22 solid 2px;
+    border-radius: 20px;
+    width: 40%;
+    height: 85.2%;
+    z-index: 5;
+    position: fixed;
+    left: 47%;
+    top: 13%;
+}
+
+#ToDo-List-Check-List {
+    border: #161b22 solid 2px;
+    border-radius: 20px;
+    width: 12%;
+    height: 85.2%;
+    z-index: 5;
+    position: fixed;
+    left: 87.6%;
+    top: 13%;
+}
+
+#Project-List-h2 {
+    position: fixed;
+    top: 10%;
+    left: 6.4%;
+    background-color: #010409;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40.1%;
+    height: 10%;
+    z-index: 5;
+}
+
+#ToDo-List-h2 {
+    position: fixed;
+    top: 10%;
+    left: 47%;
+    background-color: #010409;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40.1%;
+    height: 10%;
+    z-index: 5;
+}
+
+#ToDo-List-Done-h2 {
+    position: fixed;
+    top: 10%;
+    left: 87.8%;
+    background-color: #010409;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.2%;
+    height: 10%;
+    z-index: 5;
 }
